@@ -15,7 +15,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 2000;
-  background: rgb(192, 166, 133);
   margin: 0;
   padding: 0;
 }
@@ -140,7 +139,7 @@ section {
   z-index: 15000;
   display: inline-block; /* 確保它是塊狀按鈕 */
   padding: 10px 20px; /* 增加內距 */
-  background-color: #42300d; /* 背景色 */
+  background-color: #694b0e; /* 背景色 */
   color: #eae5e0; /* 文字顏色 */
   text-align: center; /* 文字居中 */
   border-radius: 4px; /* 圓角 */
@@ -165,5 +164,25 @@ footer {
   padding: 10px;
   color: #eae5e0;
   margin-bottom: 3px;
-  background-color: rgb(166, 133, 93);
+  background-color: rgb(51, 23, 6);
+}
+
+@media screen and (max-width: 768px) {
+  .s_left {
+    left: 50px;
+    top: 70px;
+  }
+  .s_left h1 {
+    font-size: 2.5em;
+  }
+  .s_right {
+    position: relative;
+    width: 100%;
+    height: auto; /* 保證比例正確 */
+  }
+  .moreb {
+    top: 75%;
+    left: 40%;
+    transform: scale(1.1);
+  }
 }

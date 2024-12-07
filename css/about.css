@@ -16,7 +16,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 2000;
-  background: rgb(192, 166, 133);
+  background: rgb(254, 254, 254, 0.5);
   margin: 0;
   padding: 0;
 }
@@ -45,7 +45,7 @@ nav {
 nav > a {
   display: inline-block;
   padding: 1em;
-  color: #42300d;
+  color: #393939;
   margin-top: 3px;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -53,7 +53,7 @@ nav > a {
 }
 
 nav > a:hover {
-  color: #eae5e0;
+  color: #5384ff;
   text-decoration: underline;
 }
 
@@ -81,10 +81,10 @@ nav > a:hover {
 
 /* submenu 項目樣式 */
 .submenu-btn {
-  color: #eae1ca;
+  color: #393939;
   font-size: 0.9rem;
   text-decoration: none;
-  background-color: #503918;
+  background-color: #f7f7f7;
   padding: 4px 3px; /* 保持適當的內邊距 */
   display: block; /* 確保按鈕是塊級元素 */
   width: 80px; /* 設置固定寬度 */
@@ -96,13 +96,13 @@ nav > a:hover {
 
 /* submenu 項目懸停樣式 */
 .submenu-btn:hover {
-  color: #f2de6c;
+  color: #5384ff;
 }
 
 /* H1 樣式 */
 h1 {
   font-size: 2em;
-  color: rgb(91, 57, 21);
+  color: rgb(20, 33, 61);
   font-family: "Playfair Display", serif;
 }
 
@@ -110,16 +110,16 @@ h1 {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: rgb(91, 57, 21);
+  background-color: rgb(20, 33, 61);
   transform: rotate(45deg) translateY(8px) translateX(-15px); /* 旋轉並向上移動 */
 }
 
 .intro {
   display: flex; /* 使用 Flexbox */
   width: 83%;
-  height: 400px;
+  height: 500px;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 120px;
   margin-top: 120px;
 }
 
@@ -148,8 +148,8 @@ h1 {
   padding: 50px;
   color: rgba(20, 33, 61, 1);
   box-sizing: border-box;
-  border: solid 5px rgba(245, 235, 224, 1);
-  background: rgba(245, 235, 224, 1);
+  border: solid 5px rgb(227, 240, 240);
+  background: rgb(227, 240, 240);
 }
 .intro_right h1 {
   text-align: center;
@@ -174,8 +174,9 @@ h1 {
   margin: 0; /* 移除預設的 margin */
   padding: 0%;
   font-size: 120%;
-  color: #42300d;
+  color: rgb(20, 33, 61);
 }
+
 /* Good Section 容器 */
 .good,
 .dom,
@@ -189,40 +190,44 @@ h1 {
   padding: 0px 20px; /* 左右內邊距 */
 }
 
-.dom img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.dom-all {
+  display: flex; /* 使用 Flexbox */
+  flex-direction: column; /* 內容垂直排列 */
+  justify-content: flex-start; /* 讓內容從頂部開始排列 */
+  align-items: center; /* 垂直居中框框 */
+  margin: auto;
 }
-
-/* 單個框框樣式 */
 
 .dom-box {
   flex: 1; /* 每個框框等比例分配空間 */
-  max-width: 300px; /* 框框最大寬度 */
+  max-width: 250px; /* 框框最大寬度 */
   height: 250px; /* 框框固定高度 */
   background-color: transparent;
   display: flex;
-  flex-direction: column; /* 內容垂直排列 */
-  justify-content: flex-start; /* 讓內容從頂部開始排列 */
-  align-items: center; /* 垂直居中 */
-  color: #42300d;
+  color: rgb(20, 33, 61);
   position: relative;
-  margin: 0px 10px 120px 10px;
+  margin: 0px 5px 10px 5px;
 }
 
-.dom-box h3 {
+.dom-box img {
+  width: 250px; /* 框框最大寬度 */
+  height: 200px; /* 框框固定高度 */
+  object-fit: cover; /* 保持比例並裁切超出部分 */
+}
+
+.dom-all h3 {
   font-size: 1.3em;
-  color: #42300d;
+  color: rgb(20, 33, 61);
   margin-top: 20px; /* 移除預設的 margin */
   position: relative; /* 設置為普通定位 */
   margin-bottom: 0px; /* 增加與下方內容的間距 */
 }
 
-.dom-box p {
+.dom-all p {
   margin-top: 0px;
   font-size: 1em;
-  color: #42300d;
+  color: rgb(20, 33, 61);
+  margin-bottom: 100px;
 }
 
 .dom-box:hover::after {
@@ -263,48 +268,47 @@ h1 {
 .good-box {
   flex: 1; /* 每個框框等比例分配空間 */
   max-width: 300px; /* 框框最大寬度 */
-  height: 250px; /* 框框固定高度 */
+  height: 150px; /* 框框固定高度 */
   background-color: transparent;
-  border: 0.5px solid #42300d;
   border-radius: 4px;
   display: flex;
   flex-direction: column; /* 內容垂直排列 */
   justify-content: flex-start; /* 讓內容從頂部開始排列 */
   align-items: center; /* 垂直居中 */
   color: rgba(245, 235, 224, 1);
-  background-color: #a08755;
+  background-color: #bdd4e1;
   padding: 20px;
   position: relative;
-  margin-bottom: 55px;
+  margin-bottom: 110px;
 }
 
 .good-box h3 {
   font-size: 1.3em;
-  color: rgba(245, 235, 224, 1);
-  margin-top: 15px; /* 移除預設的 margin */
+  color: rgb(20, 33, 61);
+  margin-top: 20px; /* 移除預設的 margin */
   position: relative; /* 設置為普通定位 */
-  padding-bottom: 10px; /* 增加與下方內容的間距 */
+  padding-bottom: 0px; /* 增加與下方內容的間距 */
 }
 
 /* 框框內的段落樣式 */
 .good-box p {
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #42300d;
+  margin-top: 3px;
+  font-size: 1em;
+  color: rgb(20, 33, 61);
 }
 
 .risk-box {
   flex: 1; /* 每個框框等比例分配空間 */
   max-width: 300px; /* 框框最大寬度 */
-  height: 250px; /* 框框固定高度 */
+  height: 150px; /* 框框固定高度 */
   background-color: transparent;
-  border: 0.5px solid #42300d;
+  border: 0.5px solid rgb(20, 33, 61);
   border-radius: 4px;
   display: flex;
   flex-direction: column; /* 內容垂直排列 */
   justify-content: flex-start; /* 讓內容從頂部開始排列 */
   align-items: center; /* 垂直居中 */
-  color: #42300d;
+  color: rgb(20, 33, 61);
   padding: 20px;
   position: relative;
   margin-bottom: 55px;
@@ -312,16 +316,16 @@ h1 {
 
 .risk-box h3 {
   font-size: 1.3em;
-  color: #42300d;
-  margin-top: 15px; /* 移除預設的 margin */
+  color: rgb(20, 33, 61);
+  margin-top: 20px; /* 移除預設的 margin */
   position: relative; /* 設置為普通定位 */
-  padding-bottom: 10px; /* 增加與下方內容的間距 */
+  padding-bottom: 0px; /* 增加與下方內容的間距 */
 }
 
 .risk-box p {
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #42300d;
+  margin-top: 3px;
+  font-size: 1em;
+  color: rgb(20, 33, 61) d;
 }
 
 /* Footer */
@@ -329,5 +333,30 @@ footer {
   text-align: center;
   padding: 10px;
   color: #fff;
-  background-color: rgb(166, 133, 93);
+  background-color: rgb(69, 69, 69);
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column; /* 垂直堆疊 */
+    gap: 10px; /* 縮小區塊間距 */
+  }
+
+  .intro_left,
+  .intro_right {
+    flex: 1 1 100%; /* 全寬 */
+    max-width: 100%; /* 移除最大寬度限制 */
+  }
+
+  .intro_right {
+    padding: 15px; /* 縮小內邊距 */
+  }
+
+  .intro_right h1 {
+    font-size: 1.2rem; /* 再次縮小字體 */
+  }
+
+  .intro_right p {
+    font-size: 0.9rem; /* 縮小段落字體 */
+  }
 }

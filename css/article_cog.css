@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 確保頁面無留白 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 確保內外距計算正確 */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f7f7f7;
+}
+
+/*header*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background: rgb(254, 254, 254, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+header aside {
+  max-width: 1200px;
+  margin: auto;
+}
+
+aside > a {
+  float: left;
+  display: inline-block;
+  width: 50px;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  float: right;
+  position: relative; /* 讓 submenu 可以相對於此定位 */
+}
+
+nav > a {
+  display: inline-block;
+  padding: 1em;
+  color: #393939;
+  margin-top: 3px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+nav > a:hover {
+  color: #5384ff;
+  text-decoration: underline;
+}
+
+/* 顯示 submenu 當 article-link 被懸停 */
+#article-link:hover + #submenu,
+#article-link:focus + #submenu {
+  display: block;
+}
+
+/* 隱藏submenu初始狀態 */
+.submenu {
+  position: absolute;
+  display: none;
+  list-style-type: none;
+  top: 75%; /* 顯示在 article-link 連結下方 */
+  right: 11%;
+  transform: translateX(-50%); /* 精確居中 */
+  width: max-content; /* 讓 submenu 寬度自適應 */
+}
+
+/* 給submenu項目一些間距 */
+.submenu li {
+  padding: 3px 0;
+}
+
+/* submenu 項目樣式 */
+.submenu-btn {
+  color: #393939;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: #f7f7f7;
+  padding: 4px 3px; /* 保持適當的內邊距 */
+  display: block; /* 確保按鈕是塊級元素 */
+  width: 80px; /* 設置固定寬度 */
+  text-align: center; /* 文字居中對齊 */
+  border-radius: 5px; /* 可選：圓角 */
+  margin-bottom: 2.5px; /* 若需要，可以給每個選項間距 */
+  margin-top: -5px; /* 向上移動5px */
+}
+
+/* submenu 項目懸停樣式 */
+.submenu-btn:hover {
+  color: #5384ff;
+}
+
+/* 圖片會裁切填滿容器 */
+.s_right {
+  position: relative;
+  width: 100%;
+  height: 40vh; /* 使用視口高度 */
+  overflow: hidden; /* 防止圖片超出容器 */
+  margin: 0;
+  padding: 0;
+}
+
+.s_right img {
+  object-fit: cover; /* 裁切圖片以適應容器 */
+  object-position: center -100px; /* 向上移動圖片顯示位置 */
+  width: 100%;
+  height: 100%;
+  vertical-align: top; /* 確保對齊容器頂部 */
+}
+
+h2 {
+  color: rgb(20, 33, 61);
+  font-size: 2em;
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  margin-top: 7vh;
+  margin-bottom: 0vh;
+}
+
+.nav_button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  gap: 0px; /* 每個連結之間的間距 */
+  margin-top: 0vh;
+}
+
+/* 為每個連結設置基本樣式 */
+.nav_button a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px 60px; /* 添加內邊距，讓背景圍繞文字 */
+  margin: 10px -30px;
+  background-color: #becbd1; /* 按鈕背景顏色 */
+  color: #333; /* 按鈕文字顏色 */
+  font-weight: bold; /* 加粗文字 */
+  border-radius: 30px; /* 可選：圓角 */
+}
+
+/* 狀態：hover */
+.nav_button a:hover {
+  color: #375a6a;
+  text-decoration: none;
+}
+
+.content_section div {
+  width: 60%; /*可隨視窗大小調整*/
+  margin: auto; /*物件置中*/
+  border: 2px solid #ccc; /* 添加邊框 */
+  border-radius: 5px; /* 圓角（可選） */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  margin-bottom: 10vh;
+  border-radius: 5px; /* 圓角（可選） */
+  background-color: #f9f9f9; /* 背景色（可選） */
+  display: none;
+  padding: 20px 50px;
+}
+
+.content_section h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin: 0; /* 將外距設為零 */
+  text-decoration-line: underline; /* 同時有上劃線和下劃線 */
+  text-underline-offset: 5px; /* 控制下劃線與文字的距離 */
+  color: #456794;
+}
+
+.definition_content {
+  color: rgb(0, 0, 0);
+  display: flex; /* 內部使用 Flexbox 居中文字 */
+  align-items: center; /* 垂直居中文字 */
+  justify-content: center; /* 水平居中文字 */
+}
+
+/* 顯示被選中的內容 */
+.content_section .active {
+  display: block;
+}
+
+.pic {
+  display: flex; /* 使用 Flexbox */
+  justify-content: space-between; /* 均勻分布框框 */
+  max-width: 1000px;
+  margin: 10px auto;
+  gap: 10px; /* 框框之間的間距 */
+  padding: 0px 10px; /* 左右內邊距 */
+}
+
+.pic-all {
+  display: flex; /* 使用 Flexbox */
+  flex-direction: column; /* 內容垂直排列 */
+  justify-content: flex-start; /* 讓內容從頂部開始排列 */
+  align-items: center; /* 垂直居中框框 */
+}
+
+.pic-box {
+  flex: 1; /* 每個框框等比例分配空間 */
+  max-width: 300px; /* 框框最大寬度 */
+  height: 250px; /* 框框固定高度 */
+  background-color: transparent;
+  display: flex;
+  color: rgb(20, 33, 61);
+  position: relative;
+  margin: 0px 5px 10px 5px;
+}
+
+.pic-box img {
+  width: 300px; /* 框框最大寬度 */
+  height: 250px; /* 框框固定高度 */
+  object-fit: cover; /* 保持比例並裁切超出部分 */
+}
+
+.pic-all h3 {
+  font-size: 1.3em;
+  color: rgb(20, 33, 61);
+  margin-top: 20px; /* 移除預設的 margin */
+  position: relative; /* 設置為普通定位 */
+  margin-bottom: 0px; /* 增加與下方內容的間距 */
+}
+
+.pic-all p {
+  margin-top: 0px;
+  font-size: 1em;
+  color: rgb(20, 33, 61);
+  margin-bottom: 50px;
+}
+
+.pic-box:hover::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色遮罩，50% 不透明度 */
+  z-index: 10000; /* 确保遮罩在图片上方 */
+}
+
+.pic-box:hover .moreb {
+  opacity: 1;
+}
+
+.moreb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 15000;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  background: rgba(20, 33, 61, 1);
+  padding: 20px;
+  color: rgba(255, 255, 255, 1);
+
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out; /* Safari */
+}
+/*footer*/
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #eae5e0;
+  background-color: rgb(44, 44, 44);
+}
