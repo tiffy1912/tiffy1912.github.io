@@ -1,13 +1,14 @@
-$(document).ready(function () {
-  // 點擊 Article 顯示/隱藏 submenu
-  $("#article-link").on("click", function (e) {
-    e.preventDefault(); // 阻止 href="#" 的預設行為
-    $("#submenu").toggle(); // 切換 submenu 顯示狀態
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const articleLink = document.getElementById("article-link");
+  const submenu = document.getElementById("submenu");
 
-  // 確保點擊子選單不會關閉
-  $("#submenu a").on("click", function (e) {
-    e.stopPropagation(); // 阻止事件冒泡
+  // 初始化子選單為隱藏
+  submenu.style.display = "none";
+
+  // 點擊事件切換顯示/隱藏
+  articleLink.addEventListener("click", (event) => {
+    event.preventDefault(); // 阻止預設行為
+    submenu.style.display = submenu.style.display === "none" ? "block" : "none";
   });
 
   // 預設顯示「定義」的內容
