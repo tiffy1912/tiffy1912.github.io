@@ -108,12 +108,12 @@ section {
 
 .s_left {
   position: absolute;
-  left: 170px;
+  left: 570px;
   top: 110px;
   z-index: 1500;
 }
 .s_left h1 {
-  font-size: 3.5em;
+  font-size: 4em;
   color: #eae5e0;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;

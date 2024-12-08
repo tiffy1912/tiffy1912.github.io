@@ -196,6 +196,11 @@ h4 {
   justify-content: center; /* 水平居中文字 */
 }
 
+.definition_content iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
 /* 顯示被選中的內容 */
 .content_section .active {
   display: block;
