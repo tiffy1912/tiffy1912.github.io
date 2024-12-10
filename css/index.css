@@ -108,8 +108,9 @@ section {
 
 .s_left {
   position: absolute;
-  left: 570px;
-  top: 110px;
+  top: 30%; /* 從頂部移動 50% */
+  left: 49%; /* 從左側移動 50% */
+  transform: translate(-50%, -50%); /* 向上、向左平移，實現真正居中 */
   z-index: 1500;
 }
 .s_left h1 {
@@ -117,9 +118,9 @@ section {
   color: #eae5e0;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: bold; /* 替換 <weight> */
   font-style: normal;
-  z-index: 1500;
+  text-align: center; /* 文字水平居中 */
 }
 
 .s_right {
